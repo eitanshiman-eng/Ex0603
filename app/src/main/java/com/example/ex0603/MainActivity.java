@@ -24,7 +24,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 count++;
-                txt.setText("This is a click number:" + count);
+                if(count>=6)
+                {
+                    txt.setText("Enough to click. Go to new start!");
+                }else txt.setText("This is a click number:" + count);
             }
         });
     }
