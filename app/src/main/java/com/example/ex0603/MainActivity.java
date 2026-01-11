@@ -11,6 +11,7 @@ public class MainActivity extends AppCompatActivity {
 
     TextView txt;
     Button btn;
+    int count = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,11 +20,11 @@ public class MainActivity extends AppCompatActivity {
 
         txt = findViewById(R.id.txtMessage);
         btn = findViewById(R.id.btnClick);
-
         btn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                txt.setText("Oh, yea, I’ve been clicked!");
+                count++;
+                txt.setText("This is a click number:" + count);
             }
         });
     }
